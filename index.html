@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KTFPFZ5ES"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8KTFPFZ5ES');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent: #24aaec;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html, body {
+            height: 100%;
+            background: var(--bg-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        /* Навигация */
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover, .nav a.active {
+            color: var(--accent);
+        }
+        
+        /* Hero секция */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 600px;
+        }
+        
+        /* Кнопки */
+        .big-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(36, 170, 236, 0.3);
+            border-color: var(--accent);
+        }
+        
+        .btn i {
+            font-size: 1.8rem;
+        }
+        
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .nav {
+                top: 15px;
+                right: 15px;
+                padding: 10px 15px;
+            }
+            
+            .nav a {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+            
+            .big-buttons {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+        
+        /* Скролл анимация */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .btn {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .btn:nth-child(1) { animation-delay: 0.1s; }
+        .btn:nth-child(2) { animation-delay: 0.2s; }
+        .btn:nth-child(3) { animation-delay: 0.3s; }
+        .btn:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" class="active"><i class='bx bxs-home'></i></a>
+        <a href="links.html"><i class='bx bx-link'></i></a>
+        <a href="tools.html"><i class='bx bxs-wrench'></i></a>
+        <a href="screens.html"><i class='bx bxs-image'></i></a>
+        <a href="blog.html"><i class='bx bx-edit-alt'></i></a>
+    </nav>
+    
+    <section class="hero">
+        <h1>Milk</h1>
+        <p class="subtitle">Мой личный уголок спокойствия и вдохновения.</p>
+        
+        <div class="big-buttons">
+            <a href="links.html" class="btn">
+                <i class='bx bx-link'></i>
+                Линкхаб
+            </a>
+            <a href="tools.html" class="btn">
+                <i class='bx bxs-wrench'></i>
+                Инструменты
+            </a>
+            <a href="screens.html" class="btn">
+                <i class='bx bxs-image'></i>
+                Скриншоты
+            </a>
+            <a href="blog.html" class="btn">
+                <i class='bx bx-edit-alt'></i>
+                Блог
+            </a>
+        </div>
+    </section>
+</body>
+</html>

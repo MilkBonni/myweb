@@ -1,0 +1,207 @@
+:root {
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-secondary: #cccccc;
+    --accent: #24aaec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    color: #ecedee;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+}
+
+.nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--accent);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Заголовок страницы */
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff, #a0a0a0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.blog-header p {
+    color: #6a6a6a;
+    font-size: 0.9rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Лента постов */
+.posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Отдельный пост */
+.post {
+    background: #0f0f0f;
+    border-radius: 28px;
+    padding: 1.8rem;
+    border: 1px solid #1c1c1c;
+    transition: all 0.2s ease;
+}
+
+.post:hover {
+    border-color: #2a2a2a;
+    background: #111111;
+}
+
+/* Дата */
+.post-date {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6a6a6a;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+/* Заголовок поста (опционально) */
+.post-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, #fff, #ccc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Текст поста */
+.post-content {
+    color: #d0d0d0;
+    margin-bottom: 1.2rem;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+/* Фотография в посте */
+.post-photo {
+    margin: 1.2rem 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0a0a0a;
+    border: 1px solid #222;
+}
+
+.post-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-photo:hover img {
+    transform: scale(1.01);
+}
+
+.photo-caption {
+    font-size: 0.7rem;
+    color: #6a6a6a;
+    padding: 0.5rem 0.75rem;
+    background: #0c0c0c;
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* Размышление / вопрос в конце поста */
+.post-reflection {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #222;
+    font-size: 0.85rem;
+    color: #8a8a8a;
+    font-style: italic;
+}
+
+/* Теги (если захочется) */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    font-size: 0.65rem;
+    background: #1a1a1a;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    color: #aaa;
+    letter-spacing: -0.2px;
+}
+
+/* Подпись в конце ленты */
+.footer-note {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.7rem;
+    color: #4a4a4a;
+    border-top: 1px solid #181818;
+    padding-top: 2rem;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        margin-top: 70px;
+    }
+    .post {
+        padding: 1.2rem;
+    }
+    .post-title {
+        font-size: 1.3rem;
+    }
+}

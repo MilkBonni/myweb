@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KTFPFZ5ES"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8KTFPFZ5ES');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Линкхаб</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        :root {
+            --blue: #24aaec;
+            --violet: #a033ff;
+            --pink: #ff6b9d;
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-secondary: #cccccc;
+            --accent: #24aaec;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+            font-family: -apple-system, Arial, sans-serif;
+        }
+        body { position: relative; }
+
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover, .nav a.active {
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            .nav {
+                top: 15px;
+                right: 15px;
+                padding: 10px 15px;
+            }
+            
+            .nav a {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+        }
+
+        .glass-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(90vw, 450px);
+            height: auto;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        h1 { 
+            color: white; 
+            font-size: clamp(32px, 5vw, 48px); 
+            margin: 0 0 10px; 
+            font-weight: 300;
+        }
+        .nickname { 
+            color: #ccc; 
+            font-size: 18px; 
+            margin: 0 0 20px; 
+        }
+        .slogan { 
+            color: #aaa; 
+            font-size: 16px; 
+            margin: 0 0 30px; 
+            opacity: 0.8;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .links a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        .links a:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .a-blue:hover {color: var(--blue);}
+        .a-violet:hover {color: var(--violet);}
+        .a-pink:hover {color: var(--pink);}
+        .links i { font-size: 28px; margin-right: 10px; }
+        .qr { margin-top: 30px; opacity: 0.7; }
+        .qr img { width: 100px; height: 100px; border-radius: 12px; }
+        @media (max-width: 600px) {
+            .glass-box { padding: 30px 20px; }
+            .links { gap: 15px; }
+            .links a { padding: 10px 16px; font-size: 13px; }
+            .links i { font-size: 24px; }
+        }
+    </style>
+</head>
+<body id="net">
+    <nav class="nav">
+        <a href="index.html"><i class='bx bxs-home'></i></a>
+        <a href="links.html" class="active"><i class='bx bx-link'></i></a>
+        <a href="tools.html"><i class='bx bxs-wrench'></i></a>
+        <a href="screens.html"><i class='bx bxs-image'></i></a>
+        <a href="blog.html"><i class='bx bx-edit-alt'></i></a>
+    </nav>
+
+    <div class="glass-box">
+        <h1>Milk</h1>
+        <p class="nickname">@milk_rus / @milk_bonni</p>
+        <p class="slogan">Я побуду здесь</p>
+        <div class="links">
+            <a href="https://vk.com/milk_rus" class="a-blue" data-netcolor="0x24aaec" data-platform="VK" target="_blank"><i class='bx bxl-vk'></i>VK</a>
+            <a href="https://t.me/milk_rus" class="a-blue" data-netcolor="0x24aaec" data-platform="Telegram" target="_blank"><i class='bx bxl-telegram'></i>Telegram</a>
+            <a href="https://discord.com/users/806921019801600010" class="a-blue" data-netcolor="0x24aaec" data-platform="Discord" target="_blank"><i class='bx bxl-discord-alt'></i>Discord</a>
+            <a href="https://steamcommunity.com/id/milk_rus" class="a-blue" data-netcolor="0x24aaec" data-platform="Steam" target="_blank"><i class='bx bxl-steam'></i>Steam</a>
+            <a href="https://github.com/MilkBonni" class="a-violet" data-netcolor="0xa033ff" data-platform="GitHub" target="_blank"><i class='bx bxl-github'></i>GitHub</a>
+            <a href="https://tiktok.com/@milk_bonni" class="a-pink" data-netcolor="0xff6b9d" data-platform="TikTok" target="_blank"><i class='bx bxl-tiktok'></i>TikTok</a>
+            <a href="https://shikimori.io/MilkBonni" class="a-pink" data-netcolor="0xff6b9d" data-platform="Shikimori" target="_blank"><i class='bx bxs-heart-circle'></i>Shikimori</a>
+        </div>
+        <div class="qr">
+            <!-- https://qr-server.com/ -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://t.me/milk_rus" alt="QR Telegram">
+            <p style="color:#aaa; font-size:12px; margin:5px 0 0;">Сканируй в Telegram</p>
+        </div>
+    </div>
+    <script>
+        let vantaEffect = null;
+        
+        // Инициализация Vanta
+        vantaEffect = VANTA.NET({
+            el: "#net",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffffff,
+            backgroundColor: 0x0a0a0a,
+            points: 14,
+            maxDistance: 18,
+            spacing: 16
+        });
+
+        // Обработчики hover для ссылок
+        document.querySelectorAll('.links a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                const newColor = this.getAttribute('data-netcolor');
+                if (vantaEffect && newColor) {
+                    vantaEffect.setOptions({ color: parseInt(newColor, 16) });
+                }
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                if (vantaEffect) {
+                    // Возврат к белому
+                    vantaEffect.setOptions({ color: 0xffffff });
+                }
+            });
+        });
+
+        // Трекинг кликов — ФИКС для target="_blank"
+        document.querySelectorAll('.links a').forEach(link => {
+            // Клик с задержкой (браузер успеет отправить)
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Стоп переход
+        
+                const platform = this.getAttribute('data-platform') || 'unknown';
+                console.log('Клик:', platform); // ТЕСТ
+        
+                // Отправляем событие
+                gtag('event', 'link_click', {
+                    'event_category': 'outbound',
+                    'event_label': platform,
+                    'value': 1
+                });
+        
+                // Переходим после 100мс
+                setTimeout(() => {
+                    window.open(this.href, '_blank');
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
