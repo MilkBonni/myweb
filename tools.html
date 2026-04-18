@@ -50,10 +50,30 @@
 
     <div class="category-tabs" id="tabBar">
         <button class="cat-btn active" data-cat="all">Все</button>
+        <button class="cat-btn" data-cat="ai"><i class='bx bxs-brain'></i>ИИ / Нейросети</button>
         <button class="cat-btn" data-cat="web"><i class='bx bx-desktop'></i>Веб‑разработка</button>
         <button class="cat-btn" data-cat="design"><i class='bx bxs-palette'></i>Дизайн</button>
         <button class="cat-btn" data-cat="unblock"><i class='bx bxs-lock-open-alt'></i>Обходы блокировок</button>
         <button class="cat-btn" data-cat="cool"><i class='bx bxs-like'></i>Просто прикольно</button>
+        <button class="cat-btn" data-cat="games"><i class='bx bxs-joystick'></i>Игры / Развлечения</button>
+    </div>
+
+    <!-- КАТЕГОРИЯ: ИИ / Нейросети -->
+    <div class="category-section" data-category="ai">
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-brain'></i></span><h3>DeepSeek</h3></div>
+                <div class="tool-description">Китайская языковая модель искусственного интеллекта.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag reg">требуется регистрация</span></div>
+                <a href="https://deepseek.com/" class="tool-link" target="_blank" rel="noopener noreferrer">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-brain'></i></span><h3>Perplexity AI</h3></div>
+                <div class="tool-description">Поисковая система на основе искусственного интеллекта.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag reg">требуется регистрация</span></div>
+                <a href="https://www.perplexity.ai/" class="tool-link" target="_blank" rel="noopener noreferrer">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+        </div>
     </div>
 
     <!-- КАТЕГОРИЯ: Веб-разработка -->
@@ -95,6 +115,12 @@
                 <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
                 <a href="https://htmlweb.ru/service/htpasswd.php" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
             </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bx-desktop'></i></span><h3>Uiverse</h3></div>
+                <div class="tool-description">Самая большая библиотека пользовательских интерфейсов с открытым исходным кодом.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://uiverse.io/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
         </div>
     </div>
 
@@ -115,7 +141,7 @@
             </div>
             <div class="tool-card">
                 <div class="tool-title"><span><i class='bx bxs-palette'></i></span><h3>Турболого</h3></div>
-                <div class="tool-description">Приложение для создания логотипа.</div>
+                <div class="tool-description">Приложение для создания логотипа.<br><span class="advice">Совет: после генерации логотипов откройте код элемента и скачайте изображение оттуда. Оплачивать дорогую подписку не придется.</span></div>
                 <div class="tags"><span class="tag freemium">условно бесплатно</span><span class="tag reg">требуется регистрация</span></div>
                 <a href="https://turbologo.ru/app" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
             </div>
@@ -144,16 +170,70 @@
     <div class="category-section hidden" data-category="cool">
         <div class="tools-grid">
             <div class="tool-card">
-                <div class="tool-title"><span><i class='bx bxs-like'></i></span><h3>Neal.fun</h3></div>
+                <div class="tool-title"><span><i class='bx bxs-like'></i></span><h3>๖ۣۜКлондайк ๖ۣۜПрограммиста</h3></div>
+                <div class="tool-description">Пиратская бухта для разработчиков: годные программы для Windows, скрипты, шаблоны, графика, софт для хакера и многое другое...</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://howdyho.net/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-like'></i></span><h3>Wokwi</h3></div>
+                <div class="tool-description">Онлайн‑симулятор электронных схем и микроконтроллеров. Он позволяет проектировать и тестировать схемы прямо в браузере, без физического оборудования.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://wokwi.com/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-like'></i></span><h3>iLovePDF</h3></div>
+                <div class="tool-description">Все инструменты, необходимые для работы с PDF-файлами, у вас под рукой. Все они на 100% бесплатны и просты в использовании! Объединяйте, разделяйте, сжимайте, конвертируйте, поворачивайте, разблокируйте PDF-файлы и добавляйте водяные знаки всего в несколько кликов.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://www.ilovepdf.com/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-like'></i></span><h3>Luxa</h3></div>
+                <div class="tool-description">Большое колличество инструментов для работы с изображениями и файлами в одном месте. Конвертируйте, редактируйте или просматривайте изображения, видео, аудио и PDF-документы бесплатно в режиме онлайн.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://www.luxa.org/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- КАТЕГОРИЯ: Игры / Развлечения -->
+    <div class="category-section hidden" data-category="games">
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-joystick'></i></span><h3>Neal.fun</h3></div>
                 <div class="tool-description">Игры, визуализации, интерактивные элементы и прочая ерунда.</div>
                 <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
                 <a href="https://neal.fun/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
             </div>
             <div class="tool-card">
-                <div class="tool-title"><span><i class='bx bxs-like'></i></span><h3>๖ۣۜКлондайк ๖ۣۜПрограммиста</h3></div>
-                <div class="tool-description">Пиратская бухта для разработчиков: годные программы для Windows, скрипты, шаблоны, графика, софт для хакера и многое другое...</div>
+                <div class="tool-title"><span><i class='bx bxs-joystick'></i></span><h3>Famelack</h3></div>
+                <div class="tool-description">Бесплатное телевидение в прямом эфире и онлайн-радио по всему миру.</div>
                 <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
-                <a href="https://howdyho.net/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+                <a href="https://famelack.com/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-joystick'></i></span><h3>HammyHome</h3></div>
+                <div class="tool-description">Создавайте виртуальных хомячков и заботьтесь о них с помощью Hammy Home.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://hammyhome.com/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-joystick'></i></span><h3>RetroGames</h3></div>
+                <div class="tool-description">Браузерный эмулятор с большим колличеством ретро игр.</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://www.retrogames.cc/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-joystick'></i></span><h3>MCHeads.ru</h3></div>
+                <div class="tool-description">Это большая коллекция мини-блоков или голов для Minecraft которая разделена на категории и теги. Тут вы сможете найти уникальный блок для Minecraft не используя моды!</div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://mcheads.ru/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
+            </div>
+            <div class="tool-card">
+                <div class="tool-title"><span><i class='bx bxs-joystick'></i></span><h3>Nova Skin</h3></div>
+                <div class="tool-description">Бесплатный онлайн-редактор скинов для Minecraft.<br><span class="advice">Совет: если при сохранении проекта появляется форма регистрации, просто закройте её и снова нажмите «Сохранить». Регистрация не потребуется.</span></div>
+                <div class="tags"><span class="tag free">бесплатно</span><span class="tag no-reg">без регистрации</span></div>
+                <a href="https://minecraft.novaskin.me/" class="tool-link" target="_blank">Открыть сервис <span class="arrow">→</span></a>
             </div>
         </div>
     </div>
